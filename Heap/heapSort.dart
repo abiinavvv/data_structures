@@ -36,7 +36,7 @@ void heapify(List<int> arr, int n, int i) {
 }
 
 void main() {
-  List<int> arr = [4, 10, 3, 5, 1];
+  List<int> arr = [4, 10, 3, 5, 2];
   print("Original array: $arr");
 
   heapSort(arr);
