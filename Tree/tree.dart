@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Node {
   int value;
   Node? left, right;
@@ -26,6 +28,11 @@ void postorder(Node? root) {
   print(root.value);
 }
 
+int calculateHeight(Node? root) {
+  if (root == null) return 0;
+  return 1 + max(calculateHeight(root.left), calculateHeight(root.right));
+}
+
 void main() {
   Node root = Node(20);
   root.left = Node(10);
@@ -37,4 +44,5 @@ void main() {
   preorder(root);
   print("inorder :");
   inorder(root);
+  print(calculateHeight(root));
 }
